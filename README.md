@@ -20,5 +20,5 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-    to deploy in c9 use rails s -p $PORT -b $IP
+    to deploy in c9 do rails s -p $PORT -b $IP
 * ...
