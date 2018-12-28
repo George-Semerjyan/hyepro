@@ -250,7 +250,11 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/usr/local/rvm/rubies/ruby-2.3.4/include/ruby-2.3.0/x86_64-linux -I/usr/local/rvm/rubies/ruby-2.3.4/include/ruby-2.3.0/ruby/backward -I/usr/local/rvm/rubies/ruby-2.3.4/include/ruby-2.3.0 -I.      -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  conftest.c  -L. -L/usr/local/rvm/rubies/ruby-2.3.4/lib -Wl,-R/usr/local/rvm/rubies/ruby-2.3.4/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -lffi  -lffi -Wl,-rpath,'/../lib' -Wl,-R'/../lib' -lruby -lffi  -lffi -lpthread -ldl -lcrypt -lm   -lc"
+<<<<<<< HEAD
 /tmp/ccpgspfH.o: In function `t':
+=======
+/tmp/ccp5GmXf.o: In function `t':
+>>>>>>> 630632a38a99364452b669c7e7b27ed3fdb45211
 /home/ubuntu/workspace/vendor/cache/ruby/2.3.0/gems/ffi-1.9.25/ext/ffi_c/conftest.c:14: undefined reference to `rb_thread_blocking_region'
 collect2: error: ld returned 1 exit status
 checked program was:
