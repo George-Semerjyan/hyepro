@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-<<<<<<< HEAD
     actioncable (5.2.2)
       actionpack (= 5.2.2)
       nio4r (~> 2.0)
@@ -15,37 +14,16 @@ GEM
     actionpack (5.2.2)
       actionview (= 5.2.2)
       activesupport (= 5.2.2)
-=======
-    actioncable (5.2.1)
-      actionpack (= 5.2.1)
-      nio4r (~> 2.0)
-      websocket-driver (>= 0.6.1)
-    actionmailer (5.2.1)
-      actionpack (= 5.2.1)
-      actionview (= 5.2.1)
-      activejob (= 5.2.1)
-      mail (~> 2.5, >= 2.5.4)
-      rails-dom-testing (~> 2.0)
-    actionpack (5.2.1)
-      actionview (= 5.2.1)
-      activesupport (= 5.2.1)
->>>>>>> 630632a38a99364452b669c7e7b27ed3fdb45211
       rack (~> 2.0)
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-<<<<<<< HEAD
     actionview (5.2.2)
       activesupport (= 5.2.2)
-=======
-    actionview (5.2.1)
-      activesupport (= 5.2.1)
->>>>>>> 630632a38a99364452b669c7e7b27ed3fdb45211
       builder (~> 3.1)
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-<<<<<<< HEAD
     activejob (5.2.2)
       activesupport (= 5.2.2)
       globalid (>= 0.3.6)
@@ -60,22 +38,6 @@ GEM
       activerecord (= 5.2.2)
       marcel (~> 0.3.1)
     activesupport (5.2.2)
-=======
-    activejob (5.2.1)
-      activesupport (= 5.2.1)
-      globalid (>= 0.3.6)
-    activemodel (5.2.1)
-      activesupport (= 5.2.1)
-    activerecord (5.2.1)
-      activemodel (= 5.2.1)
-      activesupport (= 5.2.1)
-      arel (>= 9.0)
-    activestorage (5.2.1)
-      actionpack (= 5.2.1)
-      activerecord (= 5.2.1)
-      marcel (~> 0.3.1)
-    activesupport (5.2.1)
->>>>>>> 630632a38a99364452b669c7e7b27ed3fdb45211
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -134,7 +96,6 @@ GEM
     rack (2.0.6)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
-<<<<<<< HEAD
     rails (5.2.2)
       actioncable (= 5.2.2)
       actionmailer (= 5.2.2)
@@ -147,20 +108,6 @@ GEM
       activesupport (= 5.2.2)
       bundler (>= 1.3.0)
       railties (= 5.2.2)
-=======
-    rails (5.2.1)
-      actioncable (= 5.2.1)
-      actionmailer (= 5.2.1)
-      actionpack (= 5.2.1)
-      actionview (= 5.2.1)
-      activejob (= 5.2.1)
-      activemodel (= 5.2.1)
-      activerecord (= 5.2.1)
-      activestorage (= 5.2.1)
-      activesupport (= 5.2.1)
-      bundler (>= 1.3.0)
-      railties (= 5.2.1)
->>>>>>> 630632a38a99364452b669c7e7b27ed3fdb45211
       sprockets-rails (>= 2.0.0)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
@@ -172,15 +119,9 @@ GEM
       rails_stdout_logging
     rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.5)
-<<<<<<< HEAD
     railties (5.2.2)
       actionpack (= 5.2.2)
       activesupport (= 5.2.2)
-=======
-    railties (5.2.1)
-      actionpack (= 5.2.1)
-      activesupport (= 5.2.1)
->>>>>>> 630632a38a99364452b669c7e7b27ed3fdb45211
       method_source
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
@@ -238,20 +179,12 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-<<<<<<< HEAD
   coffee-rails (~> 4.1, >= 4.1.1)
-=======
-  coffee-rails (~> 4.2, >= 4.2.1)
->>>>>>> 630632a38a99364452b669c7e7b27ed3fdb45211
   jbuilder (~> 2.0)
   jquery-rails (~> 4.3, >= 4.3.1)
   listen
   pg (~> 0.18.4)
-<<<<<<< HEAD
   rails (= 5.2.2)
-=======
-  rails (= 5.2.1)
->>>>>>> 630632a38a99364452b669c7e7b27ed3fdb45211
   rails_12factor
   sass-rails (~> 5.0, >= 5.0.4)
   sdoc (~> 0.4.0)
