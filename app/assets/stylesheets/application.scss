@@ -10,6 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- // Custom bootstrap variables must be set or imported *before* bootstrap.
- @import "bootstrap";
  */
+ 
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+#contact-button {
+    margin-left: 50px;
+    padding: 10px 10px 10px 10px;
+}

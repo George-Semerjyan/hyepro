@@ -1,2 +1,54 @@
 <h1>Welcome to HYE-Produce</h1>
-<p>This is the home page for Bloccit.</p>
+<p>An online farmers market.</p>
+</br>
+</br>
+</br>
+
+    <% if current_user %>
+
+<div class="container">
+    <div class="row">
+        
+     <div class="col">
+      <div class="card" style="width: 18rem;">
+      <img class="card-img-top" <%= image_tag "bluedream.jpg" %>
+        <div class="card-body">
+        <h5 class="card-title">Blue Dream</h5>
+        <p class="card-text">Blue Dream, a sativa-dominant hybrid originating in California, has achieved legendary status among West Coast strains. Crossing a Blueberry indica with the sativa Haze, Blue Dream balances full-body relaxation with gentle cerebral invigoration.</p>
+        <strong class="card-text">$1600</strong>
+        <a href="#" id="contact-button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="$1600">Contact Seller</a>
+      </div>
+    </div>
+        </div>
+        
+        
+         <div class="col">
+      <div class="card" style="width: 18rem;">
+      <img class="card-img-top" <%= image_tag "kinglouisxiii.jpg" %>
+        <div class="card-body">
+        <h5 class="card-title">King Louis XIII (OG)(indica)</h5>
+        <p class="card-text">King Louis XIII might be most famous for making wigs on men de rigeur for the French aristocracy, but in Southern California the name will bring to mind a popular indica-dominant strain. This strain announces itself as many people did in the 1600s.</p>
+        <strong class="card-text">$1700</strong>
+        <a href="#" id="contact-button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="$1700">Contact Seller</a>
+      </div>
+    </div>
+        </div>
+        
+        
+         <div class="col">
+      <div class="card" style="width: 18rem;">
+      <img class="card-img-top" <%= image_tag "hawaiian lights.jpg" %>
+        <div class="card-body">
+        <h5 class="card-title">Hawaiian Haze (sativa)</h5>
+        <p class="card-text">Hawaiian Haze is a mostly sativa strain that produces some high-quality sativa effects. A mix of Hawaiian and Haze genetics, these light, airy buds will have your head in the clouds. Many users also report that it makes them sociable and talkative.</p>
+        <strong class="card-text">$1800</strong>
+        <a href="#" id="contact-button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="$1800">Contact Seller</a>
+        
+      </div>
+    </div>
+        </div>
+        
+        <% end %>
+        
+    </div>
+</div>
