@@ -10,6 +10,7 @@ module Workspace
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.0
+    config.autoload_paths << File.join(config.root, "lib")
 
     #getting rid of rspec SQLite db warning
     Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
