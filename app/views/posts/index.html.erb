@@ -1,0 +1,28 @@
+<% if current_user %>
+
+<div class="container">
+ 
+ <h2>Fresh Produce</h2>
+</br>
+
+ <div class="row">
+ <% @posts.each do |post| %>
+     <div class="col">
+      <div class="card" style="margin-bottom: 5rem; width: 18rem;">
+      <img class="card-img-top" <%= image_tag "#{rand(3)}.jpg" %>
+        <div class="card-body">
+        <h5 class="card-title"> <%= post.strain_name %> <small> <%= post.category %></small> </h5>
+        <p class="card-text"> <%= post.description %></p>
+        <strong class="card-text">$<%= rand(1500..1800) %> </strong>
+        <a href="#" id="contact-button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title=" <%= post.phone %> ">Contact Seller</a>
+     </div>
+      </div>
+        </div>
+        
+        <% end %>
+        
+        <% else %>
+        <h3>Must sign in to view this page.</h3>
+        <% end %>
+    </div>
+</div>

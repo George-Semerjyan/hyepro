@@ -1,11 +1,11 @@
 require 'random_data'
 
  # Create Posts
- 50.times do
+ 8.times do
    Post.create!(
      strain_name: RandomData.random_word, 
-     description: RandomData.random_sentence, 
-     category: "indica", 
+     description: RandomData.random_paragraph, 
+     category: RandomData.random_category, 
      city: RandomData.random_word,
      phone: RandomData.random_number, 
      email: "test@test.com"

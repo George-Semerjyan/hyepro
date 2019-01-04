@@ -2,7 +2,7 @@
 
    def self.random_paragraph
      sentences = []
-     rand(4..6).times do
+     rand(2..4).times do
        sentences << random_sentence
      end
  
@@ -24,6 +24,11 @@
      letters.shuffle!
      letters[0,rand(3..8)].join
    end
+   
+    def self.random_category
+     catigories = ["indica", "sativa", "hybrid", "indica/hybrid", "sativa/hybrid"]
+     catigories.sample
+    end
    
    def self.random_number
      numbers = (0..9).to_a
