@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
   end
 
   def new
@@ -29,6 +30,36 @@ class PostsController < ApplicationController
   end
   
   def edit
+    @post = Post.find(params[:id])
   end
   
+  def update
+  @post = Post.find(params[:id])
+  @post.strain_name = params[:post] [:strain_name]
+  @post.description = params[:post] [:description]
+  @post.category = params[:post] [:category]
+  @post.city = params[:post] [:city]
+  @post.phone = params[:post] [:phone]
+  @post.email = params[:post] [:email]
+  
+  if @post.save
+       flash[:notice] = "Post was updated successfully."
+       redirect_to @post
+     else
+       flash.now[:alert] = "There was an error saving the post. Please try again."
+       render :edit
+  end
+  end
+  
+  def destroy
+    @post = Post.find(params[:id])
+
+     if @post.destroy
+       flash[:notice] = "\"#{@post.strain_name}\" was deleted successfully."
+       redirect_to posts_path
+     else
+       flash.now[:alert] = "There was an error deleting the post."
+       render :show
+     end
+  end
 end

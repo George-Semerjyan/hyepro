@@ -14,7 +14,7 @@
         <h5 class="card-title"> <%= post.strain_name %> <small> <%= post.category %></small> </h5>
         <p class="card-text"> <%= post.description %></p>
         <strong class="card-text">$<%= rand(1500..1800) %> </strong>
-        <a href="#" id="contact-button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title=" <%= post.phone %> ">Contact Seller</a>
+        <a id="contact-button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="<%= post.phone %>" <%= link_to "Contact Seller", post %> </a>
      </div>
       </div>
         </div>
