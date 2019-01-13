@@ -14,7 +14,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.new
     @post.strain_name = params[:post] [:strain_name]
+    @post.image.attach(params[:post] [:image])
     @post.description = params[:post] [:description]
+    @post.price = params[:post] [:price]
     @post.category = params[:post] [:category]
     @post.city = params[:post] [:city]
     @post.phone = params[:post] [:phone]
@@ -36,7 +38,9 @@ class PostsController < ApplicationController
   def update
   @post = Post.find(params[:id])
   @post.strain_name = params[:post] [:strain_name]
+  @post.image.attach(params[:post] [:image])
   @post.description = params[:post] [:description]
+  @post.price = params[:post] [:price]
   @post.category = params[:post] [:category]
   @post.city = params[:post] [:city]
   @post.phone = params[:post] [:phone]
@@ -62,4 +66,9 @@ class PostsController < ApplicationController
        render :show
      end
   end
+  
+  def post_params
+    params.require(:post).permit(:strain_name, :image, :description, :price, :category, :city, :phone, :email)
+  end
+  
 end

@@ -1,15 +1,24 @@
-<h1> Post <%= @post.id %> </h1>
+<h1> Produce Info 
+    <%= link_to "Edit", edit_post_path(@post), class: 'btn btn-success' %>
+    <%= link_to "Delete Post", @post, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this post?'} %>
+</h1>
+
 </br>
 
-
-        <div class="card" style="margin-bottom: 5rem; width: 18rem;">
-      <img class="card-img-top" <%= image_tag "#{rand(3)}.jpg" %>
+    <div class="card" style="width: 27rem; height: auto;">
+        <img class="card-img-top"> <%= image_tag(@post.image, style:"width: 100%;") %> </img>
         <div class="card-body">
-        <h5 class="card-title"> <%= @post.strain_name %> <small> <%= @post.category %></small> </h5>
-        <p class="card-text"> <%= @post.description %></p>
-        <strong class="card-text">$<%= rand(1500..1800) %> </strong>
-        <h9 class="card-text" style="padding-left: 6rem;">City: <%= @post.city %> </h9>
-     </div>
-     <%= link_to "Edit", edit_post_path(@post), class: 'btn btn-success' %>
-     <%= link_to "Delete Post", @post, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this post?'} %>
+            <h5 class="card-title"> <%= @post.strain_name %> <small> <%= @post.category %></small> </h5>
+            <p class="card-text"> <%= @post.description %></p>
+            <strong class="card-text">$<%= @post.price %></strong>
+        </div>
+     
+     <ul class="list-group list-group-flush">
+    
+        <h9 class="list-group-item"><strong> Contact Name: </strong> Steven Hyde </h9>
+        <h9 class="list-group-item"><strong> Phone: </strong><%= @post.phone %> </h9>
+        <h9 class="list-group-item"><strong> Email: </strong><%= @post.email %> </h9>
+        <h9 class="list-group-item"><strong> City: </strong><%= @post.city %> </h9>
+     </ul>
+</div>
 

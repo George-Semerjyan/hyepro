@@ -1,7 +1,7 @@
 require 'random_data'
 
  # Create Posts
- 8.times do
+ 0.times do
    Post.create!(
      strain_name: RandomData.random_word, 
      description: RandomData.random_paragraph, 
