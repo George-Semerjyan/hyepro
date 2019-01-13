@@ -11,44 +11,7 @@
      </ul>
    </div>
    <div class="col-md-8">
-    <%= form_for @post do |f| %>
-     <div class="form-group">
-        <%= f.label :strain_name %>
-        <%= f.text_field :strain_name, class: 'form-control', placeholder: "Enter strain name" %>
-     </div>
-     <div class="form-group">
-        <%= f.label :image %>
-        <%= f.file_field :image, class: 'form-control'%>
-     </div>
-     <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_area :description, rows: 2, class: 'form-control', placeholder: "Enter strain description" %>
-     </div>
-    <div class="form-group">
-    <%= f.label :price %>
-    <%= f.number_field :price, class: 'form-control', placeholder: "Enter a price" %>
-    </div>
-     <div class="form-group">
-    <%= f.label :category %> :    
-    <%= f.select :category, options_for_select(["Select One", "Indica", "Sativa", "Hybrid", "Indica/Hybrid", "Sativa/Hybrid"],:disable => ["Select One"]), class: 'form-control', id: 'sel1', placeholder: "Enter strain category" %>
-     </div>
-     <div class="form-group">
-    <%= f.label :phone %>
-    <%= f.text_field :phone, class: 'form-control', placeholder: "Enter contact phone number" %>
-     </div>
-     <div class="form-group">
-    <%= f.label :email %>
-    <%= f.text_field :email, class: 'form-control', placeholder: "Enter contact email address" %>
-    </div>
-    <div class="form-group">
-    <%= f.label :city %>
-    <%= f.text_field :city, class: 'form-control', placeholder: "Enter city" %>
-     </div>
-
-    <div class="form-group">
-     <%= f.submit "Save" %>
-    </div>
-<% end %>
+    <%= render partial: 'new_form' %>
 
 <% else %>
  <h3>Must sign in to view this page.</h3>

@@ -10,13 +10,13 @@
         <div class="card-body">
             <h5 class="card-title"> <%= @post.strain_name %> <small> <%= @post.category %></small> </h5>
             <p class="card-text"> <%= @post.description %></p>
-            <strong class="card-text">$<%= @post.price %></strong>
+            <p class="card-text"> <strong class="card-text">Price: </strong>$<%= @post.price %><small> / lb</small></p>
         </div>
      
      <ul class="list-group list-group-flush">
     
         <h9 class="list-group-item"><strong> Contact Name: </strong> Steven Hyde </h9>
-        <h9 class="list-group-item"><strong> Phone: </strong><%= @post.phone %> </h9>
+        <h9 class="list-group-item"><strong> Phone: </strong><%= number_to_phone(@post.phone) %> </h9>
         <h9 class="list-group-item"><strong> Email: </strong><%= @post.email %> </h9>
         <h9 class="list-group-item"><strong> City: </strong><%= @post.city %> </h9>
      </ul>
