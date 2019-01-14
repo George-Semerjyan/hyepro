@@ -6,7 +6,7 @@
 </br>
 
     <div class="card" style="width: 27rem; height: auto;">
-        <img class="card-img-top"> <%= image_tag(@post.image, style:"width: 100%;") %> </img>
+        <%= image_tag(@post.image, style:"width: 100%;") %>
         <div class="card-body">
             <h5 class="card-title"> <%= @post.strain_name %> <small> <%= @post.category %></small> </h5>
             <p class="card-text"> <%= @post.description %></p>
