@@ -1,20 +1,24 @@
-<h1>Welcome to HYE-Produce</h1>
-<p>An online farmers market.</p>
-</br>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">Welcome to HYE-Produce</h1>
+    <p class="lead">An online farmers market.</p>
+    <hr class="my-4">
+    <p>Growers can post their product and make connections with buyers.</p>
+  </div>
+</div>
 
-
-    <% if current_user %>
-<h4>Examples:</h4>
-</br>
 
 <div class="container">
+    <h4>Examples:</h4>
+    </br>
+
     <div class="row">
         
      <div class="col">
       <div class="card" style="margin-bottom: 5rem; width: 18rem;">
-      <img class="card-img-top" <%= image_tag "0.jpg" %>
+      <%= image_tag "0.jpg", class:"card-img-top" %>
         <div class="card-body">
-        <h5 class="card-title">Blue Dream</h5>
+        <h5 class="card-title">Blue Dream <small>Sativa/Hybrid</small> </h5>
         <p class="card-text">Blue Dream, a sativa-dominant hybrid originating in California, has achieved legendary status among West Coast strains. Crossing a Blueberry indica with the sativa Haze, Blue Dream balances full-body relaxation with gentle cerebral invigoration.</p>
         <strong class="card-text">$1600</strong>
         <a href="/posts" id="contact-button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="$1600">Contact Seller</a>
@@ -25,9 +29,9 @@
         
          <div class="col">
       <div class="card" style="margin-bottom: 5rem; width: 18rem;">
-      <img class="card-img-top" <%= image_tag "1.jpg" %>
+      <%= image_tag "1.jpg", class:"card-img-top" %>
         <div class="card-body">
-        <h5 class="card-title">King Louis XIII (OG)</h5>
+        <h5 class="card-title">King Louis XIII (OG)  <small>Indica</small></h5>
         <p class="card-text">King Louis XIII might be most famous for making wigs on men de rigeur for the French aristocracy, but in Southern California the name will bring to mind a popular indica-dominant strain. This strain announces itself as many people did in the 1600s.</p>
         <strong class="card-text">$1700</strong>
         <a href="/posts" id="contact-button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="$1700">Contact Seller</a>
@@ -38,17 +42,16 @@
         
          <div class="col">
       <div class="card" style="margin-bottom: 5rem; width: 18rem;">
-      <img class="card-img-top" <%= image_tag "2.jpg" %>
+      <%= image_tag "2.jpg", class:"card-img-top" %>
         <div class="card-body">
-        <h5 class="card-title">Hawaiian Lights </h5>
+        <h5 class="card-title">Hawaiian Lights <small>Sativa/Hybrid</small></h5>
         <p class="card-text">Hawaiian Lights is a mostly sativa strain that produces some high-quality sativa effects. A mix of Hawaiian and Haze genetics, these light, airy buds will have your head in the clouds. Many users also report that it makes them sociable and talkative.</p>
         <strong class="card-text">$1800</strong>
         <a href="/posts" id="contact-button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="$1800">Contact Seller</a>
       </div>
     </div>
         </div>
-        
-        <% end %>
-        
+
+         
     </div>
 </div>
