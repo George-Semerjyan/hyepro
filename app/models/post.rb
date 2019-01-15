@@ -6,6 +6,7 @@ class Post < ApplicationRecord
     validate :correct_image_type
     validates :price, presence: true
     validates :category, presence: true
+    validates :contact_name, presence: true
     validates :phone, length: { minimum: 10 }, presence: true
     validates :email, presence: true
     validates :city, presence:true

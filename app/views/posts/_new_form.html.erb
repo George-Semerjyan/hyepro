@@ -22,6 +22,10 @@
         <%= f.label :category %>
         <%= f.select :category, options_for_category, :prompt => "Select One", class: 'form-control', placeholder: "Enter strain category" %>
     <% end %>
+    <%= form_group_tag(@post.errors[:contact_name]) do %>
+        <%= f.label :contact_name %>
+        <%= f.text_field :contact_name, class: 'form-control', placeholder: "Enter contact name" %>
+    <% end %>
     <%= form_group_tag(@post.errors[:phone]) do %>
         <%= f.label :phone %>
         <%= f.text_field :phone, class: 'form-control', placeholder: "Enter contact phone number", value: number_to_phone(@post.phone, area_code: true, extention: 555) %>

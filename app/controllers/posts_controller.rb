@@ -18,9 +18,10 @@ class PostsController < ApplicationController
     @post.description = params[:post] [:description]
     @post.price = params[:post] [:price]
     @post.category = params[:post] [:category]
-    @post.city = params[:post] [:city]
+    @post.contact_name = params[:post] [:contact_name]
     @post.phone = params[:post] [:phone]
     @post.email = params[:post] [:email]
+    @post.city = params[:post] [:city]
     
     if @post.save
       flash[:notice] = "Post was saved successfully"
@@ -42,9 +43,10 @@ class PostsController < ApplicationController
   @post.description = params[:post] [:description]
   @post.price = params[:post] [:price]
   @post.category = params[:post] [:category]
-  @post.city = params[:post] [:city]
+  @post.contact_name = params[:post] [:contact_name]
   @post.phone = params[:post] [:phone]
   @post.email = params[:post] [:email]
+  @post.city = params[:post] [:city]
   
   if @post.save
        flash[:notice] = "Post was updated successfully."
