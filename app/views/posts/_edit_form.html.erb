@@ -4,7 +4,11 @@
 
     <%= form_group_tag(@post.errors[:strain_name]) do %>
         <%= f.label :strain_name %>
+        <% if current_user.admin? %>
+        <%= f.text_field :strain_name, class: 'form-control', placeholder: "Enter strain name", :readonly => false %>
+        <% else %>
         <%= f.text_field :strain_name, class: 'form-control', placeholder: "Enter strain name", :readonly => true %>
+        <% end %>
     <% end %>
     <%= form_group_tag(@post.errors[:image]) do %>
         <%= f.hidden_field :image, value: f.object.image.signed_id %>

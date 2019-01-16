@@ -20,6 +20,10 @@
     </ul>
       <% else %>
       
+      <li class="nav-link">
+      Loggen in as:  <%= current_user.email %>
+      </li>
+      
       <li class="nav-item">
         <%= link_to "View Produce", posts_path, class: 'nav-link' %>
       </li>

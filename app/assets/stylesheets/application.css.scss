@@ -15,6 +15,17 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+body {
+  background-color: #f5f5f5;
+}
+
+#card-container {
+  width: 21rem; 
+  height: auto;
+  margin-bottom: 24px;
+  margin-left: 3px;
+}
+
 #contact-button {
     margin-left: 50px;
     padding: 10px 10px 10px 10px;

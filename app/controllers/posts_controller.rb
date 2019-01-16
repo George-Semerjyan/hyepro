@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: [:show, :index]
+  load_and_authorize_resource params_method: :my_sanitizer
+  load_and_authorize_resource :through => :current_user
+  
   def index
     @posts = Post.all
   end
@@ -12,16 +16,8 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.new
-    @post.strain_name = params[:post] [:strain_name]
-    @post.image.attach(params[:post] [:image])
-    @post.description = params[:post] [:description]
-    @post.price = params[:post] [:price]
-    @post.category = params[:post] [:category]
-    @post.contact_name = params[:post] [:contact_name]
-    @post.phone = params[:post] [:phone]
-    @post.email = params[:post] [:email]
-    @post.city = params[:post] [:city]
+    @post = Post.new(post_params)
+    @post.user = current_user
     
     if @post.save
       flash[:notice] = "Post was saved successfully"
@@ -37,18 +33,10 @@ class PostsController < ApplicationController
   end
   
   def update
-  @post = Post.find(params[:id])
-  @post.strain_name = params[:post] [:strain_name]
-  @post.image.attach(params[:post] [:image])
-  @post.description = params[:post] [:description]
-  @post.price = params[:post] [:price]
-  @post.category = params[:post] [:category]
-  @post.contact_name = params[:post] [:contact_name]
-  @post.phone = params[:post] [:phone]
-  @post.email = params[:post] [:email]
-  @post.city = params[:post] [:city]
-  
-  if @post.save
+    authorize! :update, @post
+    @post = Post.find(params[:id])
+    
+    if @post.update_attributes(post_params)
        flash[:notice] = "Post was updated successfully."
        redirect_to @post
      else
@@ -58,6 +46,7 @@ class PostsController < ApplicationController
   end
   
   def destroy
+    authorize! :destroy, @post
     @post = Post.find(params[:id])
 
      if @post.destroy
@@ -69,8 +58,14 @@ class PostsController < ApplicationController
      end
   end
   
+   private
+  
   def post_params
-    params.require(:post).permit(:strain_name, :image, :description, :price, :category, :city, :phone, :email)
+    params.require(:post).permit(:strain_name, :image, :description, :price, :category, :contact_name, :city, :phone, :email, :user)
+  end
+  
+  def my_sanitizer 
+    params.require(:post).permit(:strain_name, :image, :description, :price, :category, :contact_name, :city, :phone, :email, :user)
   end
   
 end

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  resources :posts
+  resources :posts, execpt: [:edit]
   get 'about' => 'welcome#about'
   
   root to: 'welcome#index'

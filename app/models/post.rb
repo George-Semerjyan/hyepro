@@ -1,8 +1,9 @@
 class Post < ApplicationRecord
+    belongs_to :user
     has_one_attached :image
     
-    validates :strain_name, presence: true
-    validates :description, presence: true
+    validates :strain_name, length: { maximum: 30 }, presence: true
+    validates :description, length: { maximum: 250 }, presence: true
     validate :correct_image_type
     validates :price, presence: true
     validates :category, presence: true
