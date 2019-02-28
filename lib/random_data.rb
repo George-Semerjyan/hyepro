@@ -35,4 +35,9 @@
      numbers.shuffle!
      numbers[0,9].join
    end
+   
+   def self.random_price
+     prices = [1500, 1600, 1700]
+     prices.sample
+   end
  end
