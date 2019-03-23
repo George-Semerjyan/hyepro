@@ -1,32 +1,34 @@
 <h1> Produce Info </h1>
-
-</br>
-    <div id=card-container>
-    <div class="card">
-        <%= image_tag(@post.image, style:"width: 100%;") %>
-        <div class="card-body text-center">
-            <h5 class="card-title"> <%= @post.strain_name %> <small> <%= @post.category %></small> </h5>
-            <p class="card-text"> <%= @post.description %></p>
-            <p class="card-text"> <strong class="card-text">Price: </strong>$<%= @post.price %><small> / lb</small></p>
-        </div>
-     
-     <ul class="list-group list-group-flush">
-    
-        <h9 class="list-group-item"><strong> Contact Name: </strong> <%= @post.contact_name %> </h9>
-        <h9 class="list-group-item"><strong> Phone: </strong><%= number_to_phone(@post.phone) %> </h9>
-        <h9 class="list-group-item"><strong> Email: </strong><%= @post.email %> </h9>
-        <h9 class="list-group-item"><strong> City: </strong><%= @post.city %> </h9>
-        <% if current_user.admin? %>
-        <h9 class="list-group-item"><strong> Posted by: </strong><%= @post.user.email %> </h9>
-        <% end %>
-     </ul>
-    </div>
     </br>
-    <% if can? :update, @post %>
-        <%= link_to "Edit", edit_post_path(@post), class: 'btn btn-success' %>
-    <% end %>
-    <% if can? :destroy, @post %>
-        <%= link_to "Delete Post", @post, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this post?'} %>
-    <% end %>
+    <div id="graph" class="float-right text-center border border-secondary">
     </div>
+    
+        <div id=card-container>
+            <div class="card">
+                <%= image_tag(@post.image, style:"width: 100%;") %>
+                <div class="card-body text-center">
+                    <h5 class="card-title"> <%= @post.strain_name %> <small> <%= @post.category %></small> </h5>
+                    <p class="card-text"> <%= @post.description %></p>
+                    <p class="card-text"> <strong class="card-text">Price: </strong>$<%= @post.price %><small> / lb</small></p>
+                </div>
+                    <ul class="list-group list-group-flush">
+                        <h9 class="list-group-item"><strong> Contact Name: </strong> <%= @post.contact_name %> </h9>
+                        <h9 class="list-group-item"><strong> Phone: </strong><%= number_to_phone(@post.phone) %> </h9>
+                        <h9 class="list-group-item"><strong> Email: </strong><%= @post.email %> </h9>
+                        <h9 class="list-group-item"><strong> City: </strong><%= @post.city %> </h9>
+                    <% if current_user.admin? %>
+                        <h9 class="list-group-item"><strong> Posted by: </strong><%= @post.user.email %> </h9>
+                    <% end %>
+                    </ul>
+            </div>
+    </br>
+        <% if can? :update, @post %>
+            <%= link_to "Edit", edit_post_path(@post), class: 'btn btn-success' %>
+        <% end %>
+        
+        <% if can? :destroy, @post %>
+            <%= link_to "Delete Post", @post, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this post?'} %>
+        <% end %>
+        
+        </div>
 

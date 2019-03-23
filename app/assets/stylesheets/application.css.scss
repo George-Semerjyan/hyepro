@@ -23,6 +23,7 @@ body {
   width: 21rem; 
   height: auto;
   margin-bottom: 24px;
+  margin-right: 3px;
   margin-left: 3px;
 }
 
@@ -70,6 +71,14 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+#graph {
+  background-color: #f9f9f9;
+  width: 27rem; 
+  height: 19rem;
+  padding: 5px;
+  margin: 5px;
 }
 
 // end new_user_registration view
