@@ -12,7 +12,7 @@
     <% end %>
     <%= form_group_tag(@post.errors[:image]) do %>
         <%= f.hidden_field :image, value: f.object.image.signed_id %>
-        <%= f.file_field :image, class: 'form-control'%>
+        <%= f.file_field :image, class: 'form-control form-image-box'%>
     <% end %>
     <%= form_group_tag(@post.errors[:description]) do %>
         <%= f.label :description %>
