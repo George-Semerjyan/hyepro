@@ -12,19 +12,18 @@ require 'random_data'
  end
 
  # Create Posts
- 0.times do
+ 1.times do
    Post.create!(
-     user:   User.find(1),
-     strain_name: RandomData.random_word,
-     image: File.open('app/assets/images/1.jpg'),
-     description: RandomData.random_paragraph,
-     price: RandomData.random_price,
-     category: RandomData.random_category,
-     contact_name: RandomData.random_word,
+     strain_name: "Blue Dream",
+     description: "Blue Dream, a sativa-dominant hybrid originating in California, has achieved legendary status among West Coast strains. Crossing a Blueberry indica with the sativa Haze, Blue Dream balances full-body relaxation with gentle cerebral invigoration.",
+     category: "Sativa/Hybrid",
+     city: "LA",
      phone: 1234567890,
      email: "test@test.com",
-     city: RandomData.random_word,
-   )
+     price: 1600,
+     contact_name: "John",
+     user_id:   1
+     )
  end
  
  posts = Post.all
