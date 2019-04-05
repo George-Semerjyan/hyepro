@@ -42,7 +42,7 @@ class PostsController < ApplicationController
      else
        flash.now[:alert] = "There was an error saving the post. Please try again."
        render :edit
-  end
+    end
   end
   
   def destroy
