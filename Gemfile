@@ -7,6 +7,7 @@ gem 'rails', '5.2.2'
 #Should replace the 'sass-rails' gem in the future. currectly:UNINSTALLED
 #gem 'sassc'
 # Use SCSS for stylesheets
+gem 'sassc'
 gem 'sass-rails', '~> 5.0', '>= 5.0.4'
 # Use twitter bootstrap
 gem "bootstrap", ">= 4.3.1"
