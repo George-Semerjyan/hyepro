@@ -15,6 +15,10 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+#profile-ul {
+  list-style: none;
+}
+
 body {
   background-color: #f5f5f5;
 }

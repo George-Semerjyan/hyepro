@@ -1,3 +1,7 @@
-<%= @user.email %><br />
-<%= @user.contact_name %><br />
-<%= link_to "User Account", edit_user_registration_path %> 
+<ul id="profile-ul">
+    <li><strong> Contact Name: </strong><%= @user.contact_name %><br /></li>
+    <li><strong> Phone Number: </strong><%= number_to_phone(@user.phone) %><br /></li>
+    <li><strong> Email Address: </strong><%= @user.email %></li>
+    <li><strong> City: </strong><%= @user.city %><br /></li>
+    <li> Edit your <%= link_to "User Account", edit_user_registration_path %></li>
+</ul>
