@@ -7,6 +7,9 @@
   <h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
   <label for="inputEmail" class="sr-only">Email address</label>
   <%= f.email_field :email, autofocus: true, autocomplete: "email",type:"email", id:"inputEmail", class:"form-control", placeholder:"Email address", required: true %>
+  <%= f.text_field :contact_name, autofocus: true, autocomplete: "Contact Name",type:"text", id:"inputContact_name", class:"form-control", placeholder:"Contact Name", required: true %>
+  <%= f.text_field :phone, autocomplete: "phone",type:"text", id:"inputPhone", class:"form-control", placeholder:"Phone Number", required: true %>
+  <%= f.text_field :city, autocomplete: "city",type:"text", id:"inputCity", class:"form-control", placeholder:"City", required: true %>
   <label for="inputPassword" class="sr-only">Password</label>
   <%= f.password_field :password, autocomplete: "new-password", type:"password", id:"inputPassword", class:"form-control", placeholder:"New Password", required: true %>
   <label for="inputPassword" class="sr-only">Password Confirmation</label>

@@ -42,7 +42,7 @@ class PostsController < ApplicationController
      else
        flash.now[:alert] = "There was an error saving the post. Please try again."
        render :edit
-  end
+    end
   end
   
   def destroy
@@ -61,11 +61,11 @@ class PostsController < ApplicationController
    private
   
   def post_params
-    params.require(:post).permit(:strain_name, :image, :description, :price, :category, :contact_name, :city, :phone, :email, :user)
+    params.require(:post).permit(:strain_name, :image, :description, :price, :category, :email, :user)
   end
   
   def my_sanitizer 
-    params.require(:post).permit(:strain_name, :image, :description, :price, :category, :contact_name, :city, :phone, :email, :user)
+    params.require(:post).permit(:strain_name, :image, :description, :price, :category, :email, :user)
   end
   
 end

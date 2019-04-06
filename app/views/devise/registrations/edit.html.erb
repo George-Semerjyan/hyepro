@@ -13,6 +13,21 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :contact_name %><br />
+    <%= f.text_field :contact_name, autocomplete: "Enter a contact name" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city, autocomplete: "Enter city name" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone, autocomplete: "Enter a phone number" %>
+  </div>
+  
+  <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
